@@ -1,2 +1,8 @@
-﻿body {
+﻿body{
+    height: 100vh;
+    padding-bottom: 70px;
+}
+
+#content {
+    margin-top: 30px;
 }
