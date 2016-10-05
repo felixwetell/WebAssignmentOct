@@ -1,3 +1,15 @@
 ﻿#content {
     margin-top: 30px;
 }
+
+#contact-info i {
+    margin-right: 10px;
+}
+
+#github, #linkedin {
+    color: #7f8c8d;
+}
+
+#github:hover, #linkedin:hover {
+    color: #95a5a6;
+}
