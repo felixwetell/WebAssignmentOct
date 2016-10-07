@@ -1,4 +1,8 @@
 # WebAssignmentOct
 Web assignment for the month of October.
 
-This website is built using **Bootstrap**.
+## Purpose
+This a portfolio website built using **Bootstrap** and **C#**.
+
+## Portfolio
+
