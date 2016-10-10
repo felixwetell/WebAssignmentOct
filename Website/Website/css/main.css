@@ -2,6 +2,10 @@
     margin-top: 30px;
 }
 
+#content h3{
+    color: #27ae60;
+}
+
 #contact-info i {
     margin-right: 10px;
 }
