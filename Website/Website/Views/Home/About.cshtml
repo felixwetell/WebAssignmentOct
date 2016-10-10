@@ -1,4 +1,4 @@
-﻿@model System.Collections.Generic.List<Website.Models.Property>
+﻿@model List<Website.Models.Property>
 
 @{
     Layout = Layout = "~/Views/Shared/_Layout.cshtml";
@@ -6,8 +6,22 @@
 
 <div class="jumbotron" id="index-jumbo">
     <h2>About page</h2>
-    <p>This is a page about something. I don't know what, but about something.</p>
+
+    <p>
+    I'm a all around programmer, both being able to code back-end ssweel as front-end. 
+    I often code in C# on the back-end side and I have some knownledge about SQl and database structuring. 
+    Front-end side, I usually code HTML5, CSS3 and only some JavaScript. 
+    During my time, 2 years of programming I have used git to sync and work togheter with small teams, more specific, Github for that.
+    </p>
+
     <ul>
+        @foreach (var item in Model)
+        {
+            <li>@item</li>
+        }
+    </ul>
+
+    @*<ul>
         @foreach (var item in Model)
         {
             var type = item.GetType().ToString();
@@ -21,5 +35,5 @@
                 <li>@item</li>
             }
         }
-    </ul>
+    </ul>*@
 </div>
