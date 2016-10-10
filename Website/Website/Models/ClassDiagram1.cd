@@ -21,7 +21,7 @@
       <FileName>Models\Properties.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Website.Models.Eduaction">
+  <Class Name="Website.Models.Education">
     <Position X="0.5" Y="3" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>

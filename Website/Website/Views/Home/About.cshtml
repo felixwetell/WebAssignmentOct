@@ -8,64 +8,75 @@
     <h2>About page</h2>
 
     <p>
-    I'm a all around programmer, both being able to code back-end ssweel as front-end. 
-    I often code in C# on the back-end side and I have some knownledge about SQl and database structuring. 
-    Front-end side, I usually code HTML5, CSS3 and only some JavaScript. 
-    During my time, 2 years of programming I have used git to sync and work togheter with small teams, more specific, Github for that.
+        I'm a all around programmer, both being able to code back-end ssweel as front-end.
+        I often code in C# on the back-end side and I have some knownledge about SQl and database structuring.
+        Front-end side, I usually code HTML5, CSS3 and only some JavaScript.
+        During my time, 2 years of programming I have used git to sync and work togheter with small teams, more specific, Github for that.
     </p>
 
-        @foreach (var item in Model)
-        {
-            switch (item.GetType().ToString())
-            {
-                case "Job":
-                    <h3>Jobs</h3>
-                    <ul>
-                        <li>@item</li>
-                    </ul>
-                    break;
-
-                case "Education":
-                    <h3>Educations:</h3>
-                    <ul>
-                        <li>@item</li>
-                    </ul>
-                    break;
-
-                case "Skill":
-                    <h3>Skills:</h3>
-                    <ul>
-                        <li>@item</li>
-                    </ul>
-                    break;
-
-                case "Website.Models.Experience":
-                    <h3>Experiences:</h3>
-                    <ul>
-                        <li>@item</li>
-                    </ul>
-                    break;
-
-                default:
-                    var type = item.GetType().ToString();
-                    <h2>@type</h2>
-                    break;
-            }
-        }
-
-    @*<ul>
+    <h3>Jobs:</h3>
+    <ul>
         @foreach (var item in Model)
         {
             var type = item.GetType().ToString();
 
-            if (type == "Job")
+            if (type == "Website.Models.Job")
             {
-                <li>@item</li>
-            }
-            else if (type == "Skill")
-            {
-                <li>@item</li>
+                <li><strong>@item.Title</strong>: @item.Description</li>
             }
         }
-    </ul>*@
+    </ul>
+
+    <h3>Educations:</h3>
+    <ul>
+        @foreach (var item in Model)
+        {
+            var type = item.GetType().ToString();
+
+            if (type == "Website.Models.Education")
+            {
+                <li><strong>@item.Title</strong>: @item.Description</li>
+            }
+        }
+    </ul>
+
+    <h3>Skills:</h3>
+    <ul>
+        @foreach (var item in Model)
+        {
+            var type = item.GetType().ToString();
+
+            if (type == "Website.Models.Skill")
+            {
+                <li><strong>@item.Title</strong>: @item.Description</li>
+            }
+        }
+    </ul>
+    <h3>Experiences:</h3>
+    <ul>
+        @foreach (var item in Model)
+        {
+            var type = item.GetType().ToString();
+
+            if (type == "Website.Models.Experience")
+            {
+                <li><strong>@item.Title</strong>: @item.Description</li>
+            }
+        }
+    </ul>
+    @*<ul>
+            @foreach (var item in Model)
+            {
+                var type = item.GetType().ToString();
+
+                if (type == "Job")
+                {
+                    <li>@item</li>
+                }
+                else if (type == "Skill")
+                {
+                    <li>@item</li>
+                }
+            }
+        </ul>*@
 </div>

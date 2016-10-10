@@ -36,6 +36,6 @@ namespace Website.Models
     }
 
     public class Job : Property { }
-    public class Eduaction : Property { }
+    public class Education : Property { }
     public class Experience : Property { }
 }
