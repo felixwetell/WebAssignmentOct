@@ -14,12 +14,44 @@
     During my time, 2 years of programming I have used git to sync and work togheter with small teams, more specific, Github for that.
     </p>
 
-    <ul>
         @foreach (var item in Model)
         {
-            <li>@item</li>
+            switch (item.GetType().ToString())
+            {
+                case "Job":
+                    <h3>Jobs</h3>
+                    <ul>
+                        <li>@item</li>
+                    </ul>
+                    break;
+
+                case "Education":
+                    <h3>Educations:</h3>
+                    <ul>
+                        <li>@item</li>
+                    </ul>
+                    break;
+
+                case "Skill":
+                    <h3>Skills:</h3>
+                    <ul>
+                        <li>@item</li>
+                    </ul>
+                    break;
+
+                case "Website.Models.Experience":
+                    <h3>Experiences:</h3>
+                    <ul>
+                        <li>@item</li>
+                    </ul>
+                    break;
+
+                default:
+                    var type = item.GetType().ToString();
+                    <h2>@type</h2>
+                    break;
+            }
         }
-    </ul>
 
     @*<ul>
         @foreach (var item in Model)
