@@ -10,8 +10,16 @@
     <ul>
         @foreach (var item in Model)
         {
-            <li>@item</li>
+            var type = item.GetType().ToString();
+
+            if (type == "Job")
+            {
+                <li>@item</li>
+            }
+            else if (type == "Skill")
+            {
+                <li>@item</li>
+            }
         }
     </ul>
-
 </div>

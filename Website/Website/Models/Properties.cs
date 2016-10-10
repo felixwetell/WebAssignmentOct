@@ -8,6 +8,11 @@ namespace Website.Models
 {
     public class Property
     {
+        public Property()
+        {
+
+        }
+
         public string Title { get; set; }
         public string Description { get; set; }
         public override string ToString()
@@ -18,6 +23,11 @@ namespace Website.Models
 
     public class Skill : Property
     {
+        public Skill()
+        {
+
+        }
+
         public int Precentage { get; set; }
         public override string ToString()
         {
@@ -26,5 +36,6 @@ namespace Website.Models
     }
 
     public class Job : Property { }
-    public class Experience : Property{ }
+    public class Eduaction : Property { }
+    public class Experience : Property { }
 }
