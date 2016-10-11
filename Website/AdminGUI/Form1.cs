@@ -10,14 +10,15 @@ using System.Windows.Forms;
 
 namespace AdminGUI
 {
-    public partial class Form1 : Form
+    public partial class AdminGUI : Form
     {
-        public Form1()
+
+        public AdminGUI()
         {
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void AdminGUI_Load(object sender, EventArgs e)
         {
 
         }

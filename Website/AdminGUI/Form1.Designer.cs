@@ -1,6 +1,6 @@
 ﻿namespace AdminGUI
 {
-    partial class Form1
+    partial class AdminGUI
     {
         /// <summary>
         /// Required designer variable.
@@ -262,7 +262,7 @@
             this.label7.TabIndex = 11;
             this.label7.Text = "Title:";
             // 
-            // Form1
+            // AdminGUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -271,9 +271,9 @@
             this.Controls.Add(this.pnlEdit);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lbxProperties);
-            this.Name = "Form1";
-            this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Name = "AdminGUI";
+            this.Text = "AdminGUI";
+            this.Load += new System.EventHandler(this.AdminGUI_Load);
             this.pnlEdit.ResumeLayout(false);
             this.pnlEdit.PerformLayout();
             this.pnlAdd.ResumeLayout(false);
