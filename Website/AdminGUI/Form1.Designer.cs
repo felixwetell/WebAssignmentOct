@@ -99,6 +99,7 @@
             this.cbxEditChooseProperty.Name = "cbxEditChooseProperty";
             this.cbxEditChooseProperty.Size = new System.Drawing.Size(144, 21);
             this.cbxEditChooseProperty.TabIndex = 10;
+            this.cbxEditChooseProperty.SelectedIndexChanged += new System.EventHandler(this.cbxEditChooseProperty_SelectedIndexChanged);
             // 
             // label5
             // 
@@ -223,6 +224,7 @@
             this.cbxAddChooseProperty.Name = "cbxAddChooseProperty";
             this.cbxAddChooseProperty.Size = new System.Drawing.Size(144, 21);
             this.cbxAddChooseProperty.TabIndex = 9;
+            this.cbxAddChooseProperty.SelectedIndexChanged += new System.EventHandler(this.cbxAddChooseProperty_SelectedIndexChanged);
             // 
             // tbxAddDescription
             // 
@@ -231,6 +233,7 @@
             this.tbxAddDescription.Name = "tbxAddDescription";
             this.tbxAddDescription.Size = new System.Drawing.Size(144, 23);
             this.tbxAddDescription.TabIndex = 8;
+            this.tbxAddDescription.TextChanged += new System.EventHandler(this.tbxAddDescription_TextChanged);
             // 
             // label3
             // 
@@ -249,6 +252,7 @@
             this.tbxAddTitle.Name = "tbxAddTitle";
             this.tbxAddTitle.Size = new System.Drawing.Size(144, 23);
             this.tbxAddTitle.TabIndex = 7;
+            this.tbxAddTitle.TextChanged += new System.EventHandler(this.tbxAddTitle_TextChanged);
             // 
             // btnAddCancel
             // 
@@ -259,6 +263,7 @@
             this.btnAddCancel.TabIndex = 5;
             this.btnAddCancel.Text = "Cancel";
             this.btnAddCancel.UseVisualStyleBackColor = true;
+            this.btnAddCancel.Click += new System.EventHandler(this.btnAddCancel_Click);
             // 
             // btnAdd
             // 
@@ -269,6 +274,7 @@
             this.btnAdd.TabIndex = 3;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnLbxClear
             // 
@@ -305,7 +311,6 @@
             this.Controls.Add(this.lbxProperties);
             this.Name = "AdminGUI";
             this.Text = "AdminGUI";
-            this.Load += new System.EventHandler(this.AdminGUI_Load);
             this.pnlEdit.ResumeLayout(false);
             this.pnlEdit.PerformLayout();
             this.pnlAdd.ResumeLayout(false);

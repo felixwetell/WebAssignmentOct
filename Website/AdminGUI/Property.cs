@@ -15,6 +15,7 @@ namespace AdminGUI
     public partial class Property
     {
         public string title { get; set; }
+        public string type { get; set; }
         public string description { get; set; }
     }
 }

@@ -17,13 +17,23 @@ namespace AdminGUI
         public AdminGUI()
         {
             InitializeComponent();
+
+            cbxEditChooseProperty.Items.Add(new ComboBoxItem() { Text = "Choose a type:", Value = 0 });
+            cbxEditChooseProperty.Items.Add(new ComboBoxItem() { Text = "Jobs", Value = 1 });
+            cbxEditChooseProperty.Items.Add(new ComboBoxItem() { Text = "Education", Value = 2 });
+            cbxEditChooseProperty.Items.Add(new ComboBoxItem() { Text = "Skills", Value = 3 });
+            cbxEditChooseProperty.Items.Add(new ComboBoxItem() { Text = "Experiences", Value = 4 });
+
+            cbxAddChooseProperty.Items.Add(new ComboBoxItem() { Text = "Choose a type:", Value = 0 });
+            cbxAddChooseProperty.Items.Add(new ComboBoxItem() { Text = "Jobs", Value = 1 });
+            cbxAddChooseProperty.Items.Add(new ComboBoxItem() { Text = "Education", Value = 2 });
+            cbxAddChooseProperty.Items.Add(new ComboBoxItem() { Text = "Skills", Value = 3 });
+            cbxAddChooseProperty.Items.Add(new ComboBoxItem() { Text = "Experiences", Value = 4 });
+
+            //Hides panles
             GUI(false, false);
+            //Displays all properties
             CheckProperties();
-        }
-
-        private void AdminGUI_Load(object sender, EventArgs e)
-        {
-
         }
 
         void GUI(bool add, bool edit)
@@ -44,19 +54,26 @@ namespace AdminGUI
 
         private void lbxProperties_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+            GUI(false, true);
         }
 
         private void btnLbxAdd_Click(object sender, EventArgs e)
         {
             GUI(true, false);
+            CheckProperties();
         }
 
         private void btnLbxClear_Click(object sender, EventArgs e)
         {
             lbxProperties.SelectedIndex = -1;
+            GUI(false, false);
         }
 
+        //Start of "Edit" panel
+        private void cbxEditChooseProperty_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
         private void tbxEditTitle_TextChanged(object sender, EventArgs e)
         {
 
@@ -81,6 +98,33 @@ namespace AdminGUI
         {
 
         }
+        //End of "Edit" panel
 
+        //Start of "Add" panel
+        private void cbxAddChooseProperty_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbxAddTitle_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbxAddDescription_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAddCancel_Click(object sender, EventArgs e)
+        {
+
+        }
+        //End of "Add" panel
     }
 }
