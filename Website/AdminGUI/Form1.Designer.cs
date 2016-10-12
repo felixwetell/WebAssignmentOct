@@ -51,6 +51,10 @@
             this.btnLbxAdd = new System.Windows.Forms.Button();
             this.btnLbxRemove = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
+            this.cbxAddChooseProperty = new System.Windows.Forms.ComboBox();
+            this.cbxEditChooseProperty = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.pnlEdit.SuspendLayout();
             this.pnlAdd.SuspendLayout();
             this.SuspendLayout();
@@ -78,6 +82,8 @@
             // 
             // pnlEdit
             // 
+            this.pnlEdit.Controls.Add(this.label10);
+            this.pnlEdit.Controls.Add(this.cbxEditChooseProperty);
             this.pnlEdit.Controls.Add(this.label5);
             this.pnlEdit.Controls.Add(this.label4);
             this.pnlEdit.Controls.Add(this.tbxEditDescription);
@@ -172,6 +178,8 @@
             // 
             // pnlAdd
             // 
+            this.pnlAdd.Controls.Add(this.label9);
+            this.pnlAdd.Controls.Add(this.cbxAddChooseProperty);
             this.pnlAdd.Controls.Add(this.label7);
             this.pnlAdd.Controls.Add(this.label6);
             this.pnlAdd.Controls.Add(this.tbxAddDescription);
@@ -188,7 +196,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Arial", 12F);
-            this.label7.Location = new System.Drawing.Point(13, 110);
+            this.label7.Location = new System.Drawing.Point(17, 107);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(40, 18);
             this.label7.TabIndex = 11;
@@ -198,7 +206,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Arial", 12F);
-            this.label6.Location = new System.Drawing.Point(13, 149);
+            this.label6.Location = new System.Drawing.Point(16, 148);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(92, 18);
             this.label6.TabIndex = 11;
@@ -207,9 +215,9 @@
             // tbxAddDescription
             // 
             this.tbxAddDescription.Font = new System.Drawing.Font("Arial", 10F);
-            this.tbxAddDescription.Location = new System.Drawing.Point(122, 148);
+            this.tbxAddDescription.Location = new System.Drawing.Point(124, 146);
             this.tbxAddDescription.Name = "tbxAddDescription";
-            this.tbxAddDescription.Size = new System.Drawing.Size(144, 23);
+            this.tbxAddDescription.Size = new System.Drawing.Size(142, 23);
             this.tbxAddDescription.TabIndex = 8;
             // 
             // label3
@@ -225,9 +233,9 @@
             // tbxAddTitle
             // 
             this.tbxAddTitle.Font = new System.Drawing.Font("Arial", 10F);
-            this.tbxAddTitle.Location = new System.Drawing.Point(122, 109);
+            this.tbxAddTitle.Location = new System.Drawing.Point(124, 106);
             this.tbxAddTitle.Name = "tbxAddTitle";
-            this.tbxAddTitle.Size = new System.Drawing.Size(144, 23);
+            this.tbxAddTitle.Size = new System.Drawing.Size(142, 23);
             this.tbxAddTitle.TabIndex = 7;
             // 
             // btnAddCancel
@@ -295,13 +303,51 @@
             this.label8.TabIndex = 15;
             this.label8.Text = "Property list:";
             // 
+            // cbxAddChooseProperty
+            // 
+            this.cbxAddChooseProperty.Font = new System.Drawing.Font("Arial", 10F);
+            this.cbxAddChooseProperty.FormattingEnabled = true;
+            this.cbxAddChooseProperty.Location = new System.Drawing.Point(124, 65);
+            this.cbxAddChooseProperty.Name = "cbxAddChooseProperty";
+            this.cbxAddChooseProperty.Size = new System.Drawing.Size(142, 24);
+            this.cbxAddChooseProperty.TabIndex = 12;
+            // 
+            // cbxEditChooseProperty
+            // 
+            this.cbxEditChooseProperty.Font = new System.Drawing.Font("Arial", 10F);
+            this.cbxEditChooseProperty.FormattingEnabled = true;
+            this.cbxEditChooseProperty.Location = new System.Drawing.Point(119, 66);
+            this.cbxEditChooseProperty.Name = "cbxEditChooseProperty";
+            this.cbxEditChooseProperty.Size = new System.Drawing.Size(142, 24);
+            this.cbxEditChooseProperty.TabIndex = 16;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Arial", 12F);
+            this.label9.Location = new System.Drawing.Point(16, 66);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(45, 18);
+            this.label9.TabIndex = 13;
+            this.label9.Text = "Type:";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Arial", 12F);
+            this.label10.Location = new System.Drawing.Point(19, 66);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(45, 18);
+            this.label10.TabIndex = 16;
+            this.label10.Text = "Type:";
+            // 
             // AdminGUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(699, 511);
-            this.Controls.Add(this.pnlAdd);
             this.Controls.Add(this.pnlEdit);
+            this.Controls.Add(this.pnlAdd);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.btnLbxRemove);
             this.Controls.Add(this.btnLbxUnselect);
@@ -344,6 +390,10 @@
         private System.Windows.Forms.Button btnLbxAdd;
         private System.Windows.Forms.Button btnLbxRemove;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.ComboBox cbxEditChooseProperty;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.ComboBox cbxAddChooseProperty;
     }
 }
 

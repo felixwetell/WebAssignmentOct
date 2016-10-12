@@ -18,27 +18,28 @@ namespace AdminGUI
         {
             InitializeComponent();
 
-            ////ComboBoxItems
-            //cbxEditChooseProperty.Items.Add(new ComboBoxItem() { Text = "<Select option>", Value = 0 });
-            //cbxEditChooseProperty.Items.Add(new ComboBoxItem() { Text = "Jobs", Value = 1 });
-            //cbxEditChooseProperty.Items.Add(new ComboBoxItem() { Text = "Education", Value = 2 });
-            //cbxEditChooseProperty.Items.Add(new ComboBoxItem() { Text = "Skills", Value = 3 });
-            //cbxEditChooseProperty.Items.Add(new ComboBoxItem() { Text = "Experiences", Value = 4 });
+            //ComboBoxItems
+            cbxEditChooseProperty.Items.Add(new ComboBoxItem() { Text = "<Select option>", Value = 0 });
+            cbxEditChooseProperty.Items.Add(new ComboBoxItem() { Text = "Jobs", Value = 1 });
+            cbxEditChooseProperty.Items.Add(new ComboBoxItem() { Text = "Education", Value = 2 });
+            cbxEditChooseProperty.Items.Add(new ComboBoxItem() { Text = "Skills", Value = 3 });
+            cbxEditChooseProperty.Items.Add(new ComboBoxItem() { Text = "Experiences", Value = 4 });
 
-            //cbxAddChooseProperty.Items.Add(new ComboBoxItem() { Text = "<Select option>", Value = 0 });
-            //cbxAddChooseProperty.Items.Add(new ComboBoxItem() { Text = "Jobs", Value = 1 });
-            //cbxAddChooseProperty.Items.Add(new ComboBoxItem() { Text = "Education", Value = 2 });
-            //cbxAddChooseProperty.Items.Add(new ComboBoxItem() { Text = "Skills", Value = 3 });
-            //cbxAddChooseProperty.Items.Add(new ComboBoxItem() { Text = "Experiences", Value = 4 });
+            cbxAddChooseProperty.Items.Add(new ComboBoxItem() { Text = "<Select option>", Value = 0 });
+            cbxAddChooseProperty.Items.Add(new ComboBoxItem() { Text = "Jobs", Value = 1 });
+            cbxAddChooseProperty.Items.Add(new ComboBoxItem() { Text = "Education", Value = 2 });
+            cbxAddChooseProperty.Items.Add(new ComboBoxItem() { Text = "Skills", Value = 3 });
+            cbxAddChooseProperty.Items.Add(new ComboBoxItem() { Text = "Experiences", Value = 4 });
 
-            ////Shows "default" text
-            //cbxAddChooseProperty.SelectedIndex = 0;
-            //cbxEditChooseProperty.SelectedIndex = 0;
+            //Shows "default" text
+            cbxAddChooseProperty.SelectedIndex = 0;
+            cbxEditChooseProperty.SelectedIndex = 0;
 
             //Hides panles
             GUI(false, false);
             EditEnable(false);
             ListEnable(false);
+
             //Displays all properties
             CheckProperties();
         }
@@ -70,6 +71,7 @@ namespace AdminGUI
             btnEdit.Enabled = !toogle;
             btnEditCancel.Enabled = toogle;
             btnEditSave.Enabled = toogle;
+            cbxEditChooseProperty.Enabled = toogle;
         }
 
         void ListEnable(bool toogle)
@@ -133,6 +135,7 @@ namespace AdminGUI
             Property prop = (Property)lbxProperties.SelectedItem;
 
             prop.title = tbxEditTitle.Text;
+            prop.type = cbxEditChooseProperty.Text;
             prop.description = tbxEditDescription.Text;
 
             DataBase.SaveChanges();
@@ -158,7 +161,12 @@ namespace AdminGUI
         //Start of "Add" panel
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            Property newProp = new Property() { title = tbxAddTitle.Text, description = tbxAddDescription.Text };
+            if (cbxAddChooseProperty.SelectedIndex == 0 || tbxAddTitle.Text == string.Empty || tbxAddDescription.Text == string.Empty)
+            {
+                MessageBox.Show("At least on of the fields are empty. Please fill them in.", "Alert");
+            }
+
+            Property newProp = new Property() { title = tbxAddTitle.Text, type = cbxAddChooseProperty.Text, description = tbxAddDescription.Text };
             DataBase.Properties.Add(newProp);
             DataBase.SaveChanges();
             ClearTextBoxes();
