@@ -101,6 +101,7 @@ namespace AdminGUI
             ReadOnly(true);
             EditEnable(false);
             ListEnable(true);
+            cbxEditChooseProperty.Text = prop.type;
             tbxEditTitle.Text = prop.title;
             tbxEditDescription.Text = prop.description;
         }
@@ -141,7 +142,6 @@ namespace AdminGUI
             DataBase.SaveChanges();
             ClearTextBoxes();
             ReadOnly(true);
-            GUI(false, false);
             CheckProperties();
             EditEnable(false);
         }
@@ -165,12 +165,15 @@ namespace AdminGUI
             {
                 MessageBox.Show("At least on of the fields are empty. Please fill them in.", "Alert");
             }
-
-            Property newProp = new Property() { title = tbxAddTitle.Text, type = cbxAddChooseProperty.Text, description = tbxAddDescription.Text };
-            DataBase.Properties.Add(newProp);
-            DataBase.SaveChanges();
-            ClearTextBoxes();
-            CheckProperties();
+            else
+            {
+                Property newProp = new Property() { title = tbxAddTitle.Text, type = cbxAddChooseProperty.Text, description = tbxAddDescription.Text };
+                DataBase.Properties.Add(newProp);
+                DataBase.SaveChanges();
+                ClearTextBoxes();
+                CheckProperties();
+                cbxAddChooseProperty.SelectedIndex = 0;
+            }
         }
 
         private void btnAddCancel_Click(object sender, EventArgs e)
