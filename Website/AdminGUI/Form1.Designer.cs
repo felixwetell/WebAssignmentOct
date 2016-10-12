@@ -31,7 +31,6 @@
             this.lbxProperties = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pnlEdit = new System.Windows.Forms.Panel();
-            this.cbxEditChooseProperty = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.tbxEditDescription = new System.Windows.Forms.TextBox();
@@ -43,7 +42,6 @@
             this.pnlAdd = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.cbxAddChooseProperty = new System.Windows.Forms.ComboBox();
             this.tbxAddDescription = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.tbxAddTitle = new System.Windows.Forms.TextBox();
@@ -78,7 +76,6 @@
             // 
             // pnlEdit
             // 
-            this.pnlEdit.Controls.Add(this.cbxEditChooseProperty);
             this.pnlEdit.Controls.Add(this.label5);
             this.pnlEdit.Controls.Add(this.label4);
             this.pnlEdit.Controls.Add(this.tbxEditDescription);
@@ -91,17 +88,6 @@
             this.pnlEdit.Name = "pnlEdit";
             this.pnlEdit.Size = new System.Drawing.Size(281, 238);
             this.pnlEdit.TabIndex = 2;
-            // 
-            // cbxEditChooseProperty
-            // 
-            this.cbxEditChooseProperty.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxEditChooseProperty.Font = new System.Drawing.Font("Arial", 10F);
-            this.cbxEditChooseProperty.FormattingEnabled = true;
-            this.cbxEditChooseProperty.Location = new System.Drawing.Point(54, 67);
-            this.cbxEditChooseProperty.Name = "cbxEditChooseProperty";
-            this.cbxEditChooseProperty.Size = new System.Drawing.Size(144, 24);
-            this.cbxEditChooseProperty.TabIndex = 10;
-            this.cbxEditChooseProperty.SelectedIndexChanged += new System.EventHandler(this.cbxEditChooseProperty_SelectedIndexChanged);
             // 
             // label5
             // 
@@ -130,7 +116,6 @@
             this.tbxEditDescription.Name = "tbxEditDescription";
             this.tbxEditDescription.Size = new System.Drawing.Size(144, 23);
             this.tbxEditDescription.TabIndex = 6;
-            this.tbxEditDescription.TextChanged += new System.EventHandler(this.tbxEditDescription_TextChanged);
             // 
             // tbxEditTitle
             // 
@@ -139,7 +124,6 @@
             this.tbxEditTitle.Name = "tbxEditTitle";
             this.tbxEditTitle.Size = new System.Drawing.Size(144, 23);
             this.tbxEditTitle.TabIndex = 5;
-            this.tbxEditTitle.TextChanged += new System.EventHandler(this.tbxEditTitle_TextChanged);
             // 
             // label2
             // 
@@ -188,7 +172,6 @@
             // 
             this.pnlAdd.Controls.Add(this.label7);
             this.pnlAdd.Controls.Add(this.label6);
-            this.pnlAdd.Controls.Add(this.cbxAddChooseProperty);
             this.pnlAdd.Controls.Add(this.tbxAddDescription);
             this.pnlAdd.Controls.Add(this.label3);
             this.pnlAdd.Controls.Add(this.tbxAddTitle);
@@ -219,17 +202,6 @@
             this.label6.TabIndex = 11;
             this.label6.Text = "Description:";
             // 
-            // cbxAddChooseProperty
-            // 
-            this.cbxAddChooseProperty.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxAddChooseProperty.Font = new System.Drawing.Font("Arial", 10F);
-            this.cbxAddChooseProperty.FormattingEnabled = true;
-            this.cbxAddChooseProperty.Location = new System.Drawing.Point(44, 67);
-            this.cbxAddChooseProperty.Name = "cbxAddChooseProperty";
-            this.cbxAddChooseProperty.Size = new System.Drawing.Size(144, 24);
-            this.cbxAddChooseProperty.TabIndex = 9;
-            this.cbxAddChooseProperty.SelectedIndexChanged += new System.EventHandler(this.cbxAddChooseProperty_SelectedIndexChanged);
-            // 
             // tbxAddDescription
             // 
             this.tbxAddDescription.Font = new System.Drawing.Font("Arial", 10F);
@@ -237,7 +209,6 @@
             this.tbxAddDescription.Name = "tbxAddDescription";
             this.tbxAddDescription.Size = new System.Drawing.Size(144, 23);
             this.tbxAddDescription.TabIndex = 8;
-            this.tbxAddDescription.TextChanged += new System.EventHandler(this.tbxAddDescription_TextChanged);
             // 
             // label3
             // 
@@ -256,7 +227,6 @@
             this.tbxAddTitle.Name = "tbxAddTitle";
             this.tbxAddTitle.Size = new System.Drawing.Size(144, 23);
             this.tbxAddTitle.TabIndex = 7;
-            this.tbxAddTitle.TextChanged += new System.EventHandler(this.tbxAddTitle_TextChanged);
             // 
             // btnAddCancel
             // 
@@ -287,7 +257,7 @@
             this.btnLbxClear.Name = "btnLbxClear";
             this.btnLbxClear.Size = new System.Drawing.Size(77, 36);
             this.btnLbxClear.TabIndex = 13;
-            this.btnLbxClear.Text = "Clear";
+            this.btnLbxClear.Text = "Unselect";
             this.btnLbxClear.UseVisualStyleBackColor = true;
             this.btnLbxClear.Click += new System.EventHandler(this.btnLbxClear_Click);
             // 
@@ -337,14 +307,12 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnAddCancel;
         private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.ComboBox cbxEditChooseProperty;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox tbxEditDescription;
         private System.Windows.Forms.TextBox tbxEditTitle;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox cbxAddChooseProperty;
         private System.Windows.Forms.TextBox tbxAddDescription;
         private System.Windows.Forms.TextBox tbxAddTitle;
         private System.Windows.Forms.Button btnLbxClear;
