@@ -1,4 +1,4 @@
-﻿@model List<Website.Models.Property>
+﻿@model List<Website.Property>
 
 @{
     Layout = Layout = "~/Views/Shared/_Layout.cshtml";
@@ -14,7 +14,7 @@
         During my time, 2 years of programming I have used git to sync and work togheter with small teams, more specific, Github for that.
     </p>
 
-    <h3>Jobs:</h3>
+    @*<h3>Jobs:</h3>
     <ul>
         @foreach (var item in Model)
         {
@@ -63,20 +63,11 @@
                 <li><strong>@item.Title</strong>: @item.Description</li>
             }
         }
-    </ul>
-    @*<ul>
+    </ul>*@
+    <ul>
             @foreach (var item in Model)
             {
-                var type = item.GetType().ToString();
-
-                if (type == "Job")
-                {
-                    <li>@item</li>
-                }
-                else if (type == "Skill")
-                {
-                    <li>@item</li>
-                }
+                <li>@item.title</li>
             }
-        </ul>*@
+        </ul>
 </div>
