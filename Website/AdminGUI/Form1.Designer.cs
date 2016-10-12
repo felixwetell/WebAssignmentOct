@@ -47,8 +47,10 @@
             this.tbxAddTitle = new System.Windows.Forms.TextBox();
             this.btnAddCancel = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.btnLbxClear = new System.Windows.Forms.Button();
+            this.btnLbxUnselect = new System.Windows.Forms.Button();
             this.btnLbxAdd = new System.Windows.Forms.Button();
+            this.btnLbxRemove = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
             this.pnlEdit.SuspendLayout();
             this.pnlAdd.SuspendLayout();
             this.SuspendLayout();
@@ -131,9 +133,9 @@
             this.label2.Font = new System.Drawing.Font("Arial", 16F);
             this.label2.Location = new System.Drawing.Point(14, 14);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(98, 25);
+            this.label2.Size = new System.Drawing.Size(101, 25);
             this.label2.TabIndex = 4;
-            this.label2.Text = "Edit info:";
+            this.label2.Text = "Property:";
             // 
             // btnEdit
             // 
@@ -250,21 +252,21 @@
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // btnLbxClear
+            // btnLbxUnselect
             // 
-            this.btnLbxClear.Font = new System.Drawing.Font("Arial", 12F);
-            this.btnLbxClear.Location = new System.Drawing.Point(320, 463);
-            this.btnLbxClear.Name = "btnLbxClear";
-            this.btnLbxClear.Size = new System.Drawing.Size(77, 36);
-            this.btnLbxClear.TabIndex = 13;
-            this.btnLbxClear.Text = "Unselect";
-            this.btnLbxClear.UseVisualStyleBackColor = true;
-            this.btnLbxClear.Click += new System.EventHandler(this.btnLbxClear_Click);
+            this.btnLbxUnselect.Font = new System.Drawing.Font("Arial", 12F);
+            this.btnLbxUnselect.Location = new System.Drawing.Point(320, 463);
+            this.btnLbxUnselect.Name = "btnLbxUnselect";
+            this.btnLbxUnselect.Size = new System.Drawing.Size(77, 36);
+            this.btnLbxUnselect.TabIndex = 13;
+            this.btnLbxUnselect.Text = "Unselect";
+            this.btnLbxUnselect.UseVisualStyleBackColor = true;
+            this.btnLbxUnselect.Click += new System.EventHandler(this.btnLbxUnselect_Click);
             // 
             // btnLbxAdd
             // 
             this.btnLbxAdd.Font = new System.Drawing.Font("Arial", 12F);
-            this.btnLbxAdd.Location = new System.Drawing.Point(237, 463);
+            this.btnLbxAdd.Location = new System.Drawing.Point(153, 463);
             this.btnLbxAdd.Name = "btnLbxAdd";
             this.btnLbxAdd.Size = new System.Drawing.Size(77, 36);
             this.btnLbxAdd.TabIndex = 12;
@@ -272,15 +274,38 @@
             this.btnLbxAdd.UseVisualStyleBackColor = true;
             this.btnLbxAdd.Click += new System.EventHandler(this.btnLbxAdd_Click);
             // 
+            // btnLbxRemove
+            // 
+            this.btnLbxRemove.Font = new System.Drawing.Font("Arial", 12F);
+            this.btnLbxRemove.Location = new System.Drawing.Point(236, 463);
+            this.btnLbxRemove.Name = "btnLbxRemove";
+            this.btnLbxRemove.Size = new System.Drawing.Size(77, 36);
+            this.btnLbxRemove.TabIndex = 14;
+            this.btnLbxRemove.Text = "Remove";
+            this.btnLbxRemove.UseVisualStyleBackColor = true;
+            this.btnLbxRemove.Click += new System.EventHandler(this.btnLbxRemove_Click);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Arial", 10F);
+            this.label8.Location = new System.Drawing.Point(14, 38);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(87, 16);
+            this.label8.TabIndex = 15;
+            this.label8.Text = "Property list:";
+            // 
             // AdminGUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(699, 511);
-            this.Controls.Add(this.btnLbxClear);
-            this.Controls.Add(this.btnLbxAdd);
             this.Controls.Add(this.pnlAdd);
             this.Controls.Add(this.pnlEdit);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.btnLbxRemove);
+            this.Controls.Add(this.btnLbxUnselect);
+            this.Controls.Add(this.btnLbxAdd);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lbxProperties);
             this.Name = "AdminGUI";
@@ -315,8 +340,10 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox tbxAddDescription;
         private System.Windows.Forms.TextBox tbxAddTitle;
-        private System.Windows.Forms.Button btnLbxClear;
+        private System.Windows.Forms.Button btnLbxUnselect;
         private System.Windows.Forms.Button btnLbxAdd;
+        private System.Windows.Forms.Button btnLbxRemove;
+        private System.Windows.Forms.Label label8;
     }
 }
 

@@ -35,9 +35,10 @@ namespace AdminGUI
             //cbxAddChooseProperty.SelectedIndex = 0;
             //cbxEditChooseProperty.SelectedIndex = 0;
 
-
             //Hides panles
             GUI(false, false);
+            EditEnable(false);
+            ListEnable(false);
             //Displays all properties
             CheckProperties();
         }
@@ -64,6 +65,19 @@ namespace AdminGUI
             tbxEditDescription.ReadOnly = toogle;
         }
 
+        void EditEnable(bool toogle)
+        {
+            btnEdit.Enabled = !toogle;
+            btnEditCancel.Enabled = toogle;
+            btnEditSave.Enabled = toogle;
+        }
+
+        void ListEnable(bool toogle)
+        {
+            btnLbxRemove.Enabled = toogle;
+            btnLbxUnselect.Enabled = toogle;
+        }
+
         void ClearTextBoxes()
         {
             tbxAddTitle.Clear();
@@ -83,19 +97,34 @@ namespace AdminGUI
 
             GUI(false, true);
             ReadOnly(true);
+            EditEnable(false);
+            ListEnable(true);
             tbxEditTitle.Text = prop.title;
             tbxEditDescription.Text = prop.description;
         }
 
         private void btnLbxAdd_Click(object sender, EventArgs e)
         {
+            lbxProperties.ClearSelected();
             GUI(true, false);
         }
 
-        private void btnLbxClear_Click(object sender, EventArgs e)
+        private void btnLbxRemove_Click(object sender, EventArgs e)
+        {
+            Property prop = (Property)lbxProperties.SelectedItem;
+
+            DataBase.Properties.Remove(prop);
+            DataBase.SaveChanges();
+            CheckProperties();
+            GUI(false, false);
+            ListEnable(false);
+        }
+
+        private void btnLbxUnselect_Click(object sender, EventArgs e)
         {
             lbxProperties.ClearSelected();
             GUI(false, false);
+            ListEnable(false);
         }
 
         //Start of "Edit" panel
@@ -111,16 +140,18 @@ namespace AdminGUI
             ReadOnly(true);
             GUI(false, false);
             CheckProperties();
+            EditEnable(false);
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
             ReadOnly(false);
+            EditEnable(true);
         }
 
         private void btnEditCancel_Click(object sender, EventArgs e)
         {
-            GUI(false, false);
+            EditEnable(false);
         }
         //End of "Edit" panel
 
