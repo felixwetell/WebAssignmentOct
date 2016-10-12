@@ -101,6 +101,7 @@ namespace AdminGUI
             ReadOnly(true);
             EditEnable(false);
             ListEnable(true);
+            cbxEditChooseProperty.Text = prop.type;
             tbxEditTitle.Text = prop.title;
             tbxEditDescription.Text = prop.description;
         }
@@ -141,7 +142,6 @@ namespace AdminGUI
             DataBase.SaveChanges();
             ClearTextBoxes();
             ReadOnly(true);
-            GUI(false, false);
             CheckProperties();
             EditEnable(false);
         }
@@ -161,17 +161,19 @@ namespace AdminGUI
         //Start of "Add" panel
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            //if (cbxAddChooseProperty.SelectedIndex == 0)
-            //{
-            //    MessageBox.Show("You have to choose another type", "Alert");
-            //    return;
-            //}
-
-            Property newProp = new Property() { title = tbxAddTitle.Text, type = cbxAddChooseProperty.Text, description = tbxAddDescription.Text };
-            DataBase.Properties.Add(newProp);
-            DataBase.SaveChanges();
-            ClearTextBoxes();
-            CheckProperties();
+            if (cbxAddChooseProperty.SelectedIndex == 0 || tbxAddTitle.Text == string.Empty || tbxAddDescription.Text == string.Empty)
+            {
+                MessageBox.Show("At least on of the fields are empty. Please fill them in.", "Alert");
+            }
+            else
+            {
+                Property newProp = new Property() { title = tbxAddTitle.Text, type = cbxAddChooseProperty.Text, description = tbxAddDescription.Text };
+                DataBase.Properties.Add(newProp);
+                DataBase.SaveChanges();
+                ClearTextBoxes();
+                CheckProperties();
+                cbxAddChooseProperty.SelectedIndex = 0;
+            }
         }
 
         private void btnAddCancel_Click(object sender, EventArgs e)

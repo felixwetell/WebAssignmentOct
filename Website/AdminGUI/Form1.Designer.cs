@@ -31,6 +31,8 @@
             this.lbxProperties = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pnlEdit = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
+            this.cbxEditChooseProperty = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.tbxEditDescription = new System.Windows.Forms.TextBox();
@@ -40,6 +42,8 @@
             this.btnEditCancel = new System.Windows.Forms.Button();
             this.btnEditSave = new System.Windows.Forms.Button();
             this.pnlAdd = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
+            this.cbxAddChooseProperty = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.tbxAddDescription = new System.Windows.Forms.TextBox();
@@ -51,10 +55,6 @@
             this.btnLbxAdd = new System.Windows.Forms.Button();
             this.btnLbxRemove = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
-            this.cbxAddChooseProperty = new System.Windows.Forms.ComboBox();
-            this.cbxEditChooseProperty = new System.Windows.Forms.ComboBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.pnlEdit.SuspendLayout();
             this.pnlAdd.SuspendLayout();
             this.SuspendLayout();
@@ -96,6 +96,26 @@
             this.pnlEdit.Name = "pnlEdit";
             this.pnlEdit.Size = new System.Drawing.Size(281, 238);
             this.pnlEdit.TabIndex = 2;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Arial", 12F);
+            this.label10.Location = new System.Drawing.Point(19, 66);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(45, 18);
+            this.label10.TabIndex = 16;
+            this.label10.Text = "Type:";
+            // 
+            // cbxEditChooseProperty
+            // 
+            this.cbxEditChooseProperty.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxEditChooseProperty.Font = new System.Drawing.Font("Arial", 10F);
+            this.cbxEditChooseProperty.FormattingEnabled = true;
+            this.cbxEditChooseProperty.Location = new System.Drawing.Point(119, 66);
+            this.cbxEditChooseProperty.Name = "cbxEditChooseProperty";
+            this.cbxEditChooseProperty.Size = new System.Drawing.Size(142, 24);
+            this.cbxEditChooseProperty.TabIndex = 16;
             // 
             // label5
             // 
@@ -191,6 +211,26 @@
             this.pnlAdd.Name = "pnlAdd";
             this.pnlAdd.Size = new System.Drawing.Size(281, 238);
             this.pnlAdd.TabIndex = 3;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Arial", 12F);
+            this.label9.Location = new System.Drawing.Point(16, 66);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(45, 18);
+            this.label9.TabIndex = 13;
+            this.label9.Text = "Type:";
+            // 
+            // cbxAddChooseProperty
+            // 
+            this.cbxAddChooseProperty.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxAddChooseProperty.Font = new System.Drawing.Font("Arial", 10F);
+            this.cbxAddChooseProperty.FormattingEnabled = true;
+            this.cbxAddChooseProperty.Location = new System.Drawing.Point(124, 65);
+            this.cbxAddChooseProperty.Name = "cbxAddChooseProperty";
+            this.cbxAddChooseProperty.Size = new System.Drawing.Size(142, 24);
+            this.cbxAddChooseProperty.TabIndex = 12;
             // 
             // label7
             // 
@@ -303,51 +343,13 @@
             this.label8.TabIndex = 15;
             this.label8.Text = "Property list:";
             // 
-            // cbxAddChooseProperty
-            // 
-            this.cbxAddChooseProperty.Font = new System.Drawing.Font("Arial", 10F);
-            this.cbxAddChooseProperty.FormattingEnabled = true;
-            this.cbxAddChooseProperty.Location = new System.Drawing.Point(124, 65);
-            this.cbxAddChooseProperty.Name = "cbxAddChooseProperty";
-            this.cbxAddChooseProperty.Size = new System.Drawing.Size(142, 24);
-            this.cbxAddChooseProperty.TabIndex = 12;
-            // 
-            // cbxEditChooseProperty
-            // 
-            this.cbxEditChooseProperty.Font = new System.Drawing.Font("Arial", 10F);
-            this.cbxEditChooseProperty.FormattingEnabled = true;
-            this.cbxEditChooseProperty.Location = new System.Drawing.Point(119, 66);
-            this.cbxEditChooseProperty.Name = "cbxEditChooseProperty";
-            this.cbxEditChooseProperty.Size = new System.Drawing.Size(142, 24);
-            this.cbxEditChooseProperty.TabIndex = 16;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Arial", 12F);
-            this.label9.Location = new System.Drawing.Point(16, 66);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(45, 18);
-            this.label9.TabIndex = 13;
-            this.label9.Text = "Type:";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Arial", 12F);
-            this.label10.Location = new System.Drawing.Point(19, 66);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(45, 18);
-            this.label10.TabIndex = 16;
-            this.label10.Text = "Type:";
-            // 
             // AdminGUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(699, 511);
-            this.Controls.Add(this.pnlEdit);
             this.Controls.Add(this.pnlAdd);
+            this.Controls.Add(this.pnlEdit);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.btnLbxRemove);
             this.Controls.Add(this.btnLbxUnselect);

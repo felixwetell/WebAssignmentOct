@@ -64,3 +64,7 @@ I:\Development\WebAssignmentOct\Website\Website\bin\System.Web.Mvc.xml
 I:\Development\WebAssignmentOct\Website\Website\obj\Debug\Website.csprojResolveAssemblyReference.cache
 I:\Development\WebAssignmentOct\Website\Website\obj\Debug\Website.dll
 I:\Development\WebAssignmentOct\Website\Website\obj\Debug\Website.pdb
+C:\Users\Admin\Source\Repos\WebAssignmentOct\Website\Website\bin\EntityFramework.dll
+C:\Users\Admin\Source\Repos\WebAssignmentOct\Website\Website\bin\EntityFramework.SqlServer.dll
+C:\Users\Admin\Source\Repos\WebAssignmentOct\Website\Website\bin\EntityFramework.xml
+C:\Users\Admin\Source\Repos\WebAssignmentOct\Website\Website\bin\EntityFramework.SqlServer.xml

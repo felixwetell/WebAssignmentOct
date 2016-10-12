@@ -1,4 +1,4 @@
-﻿@model List<Website.Models.Property>
+﻿@model List<Website.Property>
 
 @{
     Layout = Layout = "~/Views/Shared/_Layout.cshtml";
@@ -14,69 +14,31 @@
         During my time, 2 years of programming I have used git to sync and work togheter with small teams, more specific, Github for that.
     </p>
 
-    <h3>Jobs:</h3>
-    <ul>
-        @foreach (var item in Model)
-        {
-            var type = item.GetType().ToString();
-
-            if (type == "Website.Models.Job")
-            {
-                <li><strong>@item.Title</strong>: @item.Description</li>
-            }
-        }
+    <ul class="nav nav-pills" role="tablist" id="tab">
+        <li role="presentation"><a class="nav-link" data-toogle="tab" role="tab" aria-controls="jobs" href="#jobs">Jobs</a></li>
+        <li role="presentation"><a class="nav-link" data-toogle="tab" role="tab" aria-controls="education" href="#education">Education</a></li>
+        <li role="presentation"><a class="nav-link" data-toogle="tab" role="tab" aria-controls="skills" href="#skills">Skills</a></li>
+        <li role="presentation"><a class="nav-link" data-toogle="tab" role="tab" aria-controls="experiences" href="#experiences">Experiences</a></li>
     </ul>
 
-    <h3>Educations:</h3>
-    <ul>
-        @foreach (var item in Model)
-        {
-            var type = item.GetType().ToString();
-
-            if (type == "Website.Models.Education")
-            {
-                <li><strong>@item.Title</strong>: @item.Description</li>
-            }
-        }
-    </ul>
-
-    <h3>Skills:</h3>
-    <ul>
-        @foreach (var item in Model)
-        {
-            var type = item.GetType().ToString();
-
-            if (type == "Website.Models.Skill")
-            {
-                <li><strong>@item.Title</strong>: @item.Description</li>
-            }
-        }
-    </ul>
-    <h3>Experiences:</h3>
-    <ul>
-        @foreach (var item in Model)
-        {
-            var type = item.GetType().ToString();
-
-            if (type == "Website.Models.Experience")
-            {
-                <li><strong>@item.Title</strong>: @item.Description</li>
-            }
-        }
-    </ul>
-    @*<ul>
-            @foreach (var item in Model)
-            {
-                var type = item.GetType().ToString();
-
-                if (type == "Job")
+    <div class="tab-content">
+        <div class="tab-pane active" id="jobs" role="tabpanel">
+            <ul>
+                @foreach (var item in Model)
                 {
-                    <li>@item</li>
+                    <li>@item.title</li>
                 }
-                else if (type == "Skill")
-                {
-                    <li>@item</li>
-                }
-            }
-        </ul>*@
+            </ul>
+        </div>
+        <div class="tab-pane" id="education" role="tabpanel">...</div>
+        <div class="tab-pane" id="skills" role="tabpanel">...</div>
+        <div class="tab-pane" id="experience" role="tabpanel">...</div>
+    </div>
+
+    <script>
+        $(function () {
+            $('#tab a:[#skills]').tab('show')
+        })
+    </script>
+
 </div>
