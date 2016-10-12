@@ -161,10 +161,11 @@ namespace AdminGUI
         //Start of "Add" panel
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            if (cbxAddChooseProperty.SelectedIndex == 0 || tbxAddTitle.Text == string.Empty || tbxAddDescription.Text == string.Empty)
-            {
-                MessageBox.Show("At least on of the fields are empty. Please fill them in.", "Alert");
-            }
+            //if (cbxAddChooseProperty.SelectedIndex == 0)
+            //{
+            //    MessageBox.Show("You have to choose another type", "Alert");
+            //    return;
+            //}
 
             Property newProp = new Property() { title = tbxAddTitle.Text, type = cbxAddChooseProperty.Text, description = tbxAddDescription.Text };
             DataBase.Properties.Add(newProp);
