@@ -94,10 +94,12 @@
             // 
             // cbxEditChooseProperty
             // 
+            this.cbxEditChooseProperty.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxEditChooseProperty.Font = new System.Drawing.Font("Arial", 10F);
             this.cbxEditChooseProperty.FormattingEnabled = true;
             this.cbxEditChooseProperty.Location = new System.Drawing.Point(54, 67);
             this.cbxEditChooseProperty.Name = "cbxEditChooseProperty";
-            this.cbxEditChooseProperty.Size = new System.Drawing.Size(144, 21);
+            this.cbxEditChooseProperty.Size = new System.Drawing.Size(144, 24);
             this.cbxEditChooseProperty.TabIndex = 10;
             this.cbxEditChooseProperty.SelectedIndexChanged += new System.EventHandler(this.cbxEditChooseProperty_SelectedIndexChanged);
             // 
@@ -192,7 +194,7 @@
             this.pnlAdd.Controls.Add(this.tbxAddTitle);
             this.pnlAdd.Controls.Add(this.btnAddCancel);
             this.pnlAdd.Controls.Add(this.btnAdd);
-            this.pnlAdd.Location = new System.Drawing.Point(691, 57);
+            this.pnlAdd.Location = new System.Drawing.Point(404, 57);
             this.pnlAdd.Name = "pnlAdd";
             this.pnlAdd.Size = new System.Drawing.Size(281, 238);
             this.pnlAdd.TabIndex = 3;
@@ -219,10 +221,12 @@
             // 
             // cbxAddChooseProperty
             // 
+            this.cbxAddChooseProperty.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxAddChooseProperty.Font = new System.Drawing.Font("Arial", 10F);
             this.cbxAddChooseProperty.FormattingEnabled = true;
             this.cbxAddChooseProperty.Location = new System.Drawing.Point(44, 67);
             this.cbxAddChooseProperty.Name = "cbxAddChooseProperty";
-            this.cbxAddChooseProperty.Size = new System.Drawing.Size(144, 21);
+            this.cbxAddChooseProperty.Size = new System.Drawing.Size(144, 24);
             this.cbxAddChooseProperty.TabIndex = 9;
             this.cbxAddChooseProperty.SelectedIndexChanged += new System.EventHandler(this.cbxAddChooseProperty_SelectedIndexChanged);
             // 
@@ -302,7 +306,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1338, 796);
+            this.ClientSize = new System.Drawing.Size(699, 511);
             this.Controls.Add(this.btnLbxClear);
             this.Controls.Add(this.btnLbxAdd);
             this.Controls.Add(this.pnlAdd);
