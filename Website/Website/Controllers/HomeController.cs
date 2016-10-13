@@ -9,19 +9,6 @@ namespace Website.Controllers
 {
     public class HomeController : Controller
     {
-        WebsiteDB DataBase;
-        List<Property> PropertyList;
-
-        public HomeController()
-        {
-            DataBase = new WebsiteDB();
-            PropertyList = new List<Property>();
-            foreach (var item in DataBase.Properties)
-            {
-                PropertyList.Add(item);
-            }
-        }
-
         // GET: Home
         public ActionResult Index()
         {
@@ -29,7 +16,7 @@ namespace Website.Controllers
         }
         public ActionResult About()
         {
-            return View(PropertyList);
+            return View(new WebsiteDB().Properties.ToList());
         }
         public ActionResult Contact()
         {

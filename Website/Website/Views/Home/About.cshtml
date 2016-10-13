@@ -8,73 +8,79 @@
     <h2>About page</h2>
 
     <p>
-        I'm a all around programmer, both being able to code back-end ssweel as front-end.
-        I often code in C# on the back-end side and I have some knownledge about SQl and database structuring.
+        I'm an all-around programmer, both able to code back-end aswell as front-end.
+        I often code in C# on the back-end side and I have some knownledge about SQL and database structuring.
         Front-end side, I usually code HTML5, CSS3 and only some JavaScript.
-        During my time, 2 years of programming I have used git to sync and work togheter with small teams, more specific, Github for that.
+        I have now learned C# and I do have some knownledge in Java too.
+        During my time (2 years) when programming I have used git to sync and work togheter with small teams.
+        The git client I'm most familiar with is Github.
     </p>
 
-    <ul class="nav nav-pills" role="tablist" id="tab">
-        <li role="presentation"><a class="nav-link active" data-toogle="tab" role="tab" aria-controls="jobs" href="#jobs">Jobs</a></li>
-        <li role="presentation"><a class="nav-link" data-toogle="tab" role="tab" aria-controls="education" href="#education">Education</a></li>
-        <li role="presentation"><a class="nav-link" data-toogle="tab" role="tab" aria-controls="skills" href="#skills">Skills</a></li>
-        <li role="presentation"><a class="nav-link" data-toogle="tab" role="tab" aria-controls="experiences" href="#experiences">Experiences</a></li>
-    </ul>
+    <div id="content">
+        <ul class="nav nav-tabs" role="tablist" id="tabs">
+            <li class="active"><a class="nav-link" data-toogle="tab" href="#jobs">Jobs</a></li>
+            <li><a class="nav-link" href="#education">Education</a></li>
+            <li><a class="nav-link" href="#skills">Skills</a></li>
+            <li><a class="nav-link" href="#experiences">Experiences</a></li>
+        </ul>
 
-    <div class="tab-content">
-        <div class="tab-pane active" id="jobs" role="tabpanel">
-            <ul>
-                @foreach (var item in Model)
-                {
-                    if (item.type == "Job")
+        <div class="tab-content">
+            <div class="tab-pane active" id="jobs">
+                <ul>
+                    @foreach (var item in Model)
                     {
-                        <li>@item.title | @item.description</li>
+                        if (item.type == "Job")
+                        {
+                            <li>@item.title | @item.description</li>
+                        }
                     }
-                }
-            </ul>
+                </ul>
+            </div>
+
+            <div class="tab-pane" id="education" role="tabpanel">
+                <ul>
+                    @foreach (var item in Model)
+                    {
+                        if (item.type == "Education")
+                        {
+                            <li>@item.title | @item.description</li>
+                        }
+                    }
+                </ul>
+            </div>
+
+            <div class="tab-pane" id="skills" role="tabpanel">
+                <ul>
+                    @foreach (var item in Model)
+                    {
+                        if (item.type == "Skill")
+                        {
+                            <li>@item.title | @item.description</li>
+                        }
+                    }
+                </ul>
+            </div>
+
+            <div class="tab-pane" id="experience" role="tabpanel">
+                <ul>
+                    @foreach (var item in Model)
+                    {
+                        if (item.type == "Experience")
+                        {
+                            <li>@item.title | @item.description</li>
+                        }
+                    }
+                </ul>
+            </div>
         </div>
 
-        <div class="tab-pane" id="education" role="tabpanel">
-            <ul>
-                @foreach (var item in Model)
-                {
-                    if (item.type == "Education")
-                    {
-                        <li>@item.title | @item.description</li>
-                    }
-                }
-            </ul>
-        </div>
+        <script type="text/javascript" src="assets/twitterbootstrap/js/bootstrap-tab.js"></script>
 
-        <div class="tab-pane" id="skills" role="tabpanel">
-            <ul>
-                @foreach (var item in Model)
-                {
-                    if (item.type == "Skill")
-                    {
-                        <li>@item.title | @item.description</li>
-                    }
-                }
-            </ul>
-        </div>
-
-        <div class="tab-pane" id="experience" role="tabpanel">
-            <ul>
-                @foreach (var item in Model)
-                {
-                    if (item.type == "Experience")
-                    {
-                        <li>@item.title | @item.description</li>
-                    }
-                }
-            </ul>
-        </div>
+        <script type="text/javascript">
+            jQuery(document).ready(function ($) {
+                ('#tabs').tab();
+            });
+        </script>
     </div>
-
-    <script>
-        $(function () {
-            $('#tab a:first').tab('show')
-        })
-    </script>
 
 </div>
