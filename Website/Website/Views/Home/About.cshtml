@@ -15,7 +15,7 @@
     </p>
 
     <ul class="nav nav-pills" role="tablist" id="tab">
-        <li role="presentation"><a class="nav-link" data-toogle="tab" role="tab" aria-controls="jobs" href="#jobs">Jobs</a></li>
+        <li role="presentation"><a class="nav-link active" data-toogle="tab" role="tab" aria-controls="jobs" href="#jobs">Jobs</a></li>
         <li role="presentation"><a class="nav-link" data-toogle="tab" role="tab" aria-controls="education" href="#education">Education</a></li>
         <li role="presentation"><a class="nav-link" data-toogle="tab" role="tab" aria-controls="skills" href="#skills">Skills</a></li>
         <li role="presentation"><a class="nav-link" data-toogle="tab" role="tab" aria-controls="experiences" href="#experiences">Experiences</a></li>
@@ -26,18 +26,54 @@
             <ul>
                 @foreach (var item in Model)
                 {
-                    <li>@item.title</li>
+                    if (item.type == "Job")
+                    {
+                        <li>@item.title | @item.description</li>
+                    }
                 }
             </ul>
         </div>
-        <div class="tab-pane" id="education" role="tabpanel">...</div>
-        <div class="tab-pane" id="skills" role="tabpanel">...</div>
-        <div class="tab-pane" id="experience" role="tabpanel">...</div>
+
+        <div class="tab-pane" id="education" role="tabpanel">
+            <ul>
+                @foreach (var item in Model)
+                {
+                    if (item.type == "Education")
+                    {
+                        <li>@item.title | @item.description</li>
+                    }
+                }
+            </ul>
+        </div>
+
+        <div class="tab-pane" id="skills" role="tabpanel">
+            <ul>
+                @foreach (var item in Model)
+                {
+                    if (item.type == "Skill")
+                    {
+                        <li>@item.title | @item.description</li>
+                    }
+                }
+            </ul>
+        </div>
+
+        <div class="tab-pane" id="experience" role="tabpanel">
+            <ul>
+                @foreach (var item in Model)
+                {
+                    if (item.type == "Experience")
+                    {
+                        <li>@item.title | @item.description</li>
+                    }
+                }
+            </ul>
+        </div>
     </div>
 
     <script>
         $(function () {
-            $('#tab a:[#skills]').tab('show')
+            $('#tab a:first').tab('show')
         })
     </script>
 
